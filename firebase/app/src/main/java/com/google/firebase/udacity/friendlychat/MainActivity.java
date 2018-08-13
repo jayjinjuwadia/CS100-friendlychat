@@ -246,6 +246,9 @@ public class MainActivity extends AppCompatActivity {
                 //sign out
                 AuthUI.getInstance().signOut(this);
                 return true;
+            case R.id.profile_menu:
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }
