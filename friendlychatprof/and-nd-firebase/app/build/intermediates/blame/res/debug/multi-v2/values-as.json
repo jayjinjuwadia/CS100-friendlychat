@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/jayjinjuwadia/cs100/friendlychat/android-tutorial-jayjinjuwadia/and-nd-firebase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml",
+            "map": [
+                {
+                    "source": "/Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.1.0.aar/0f3c27cf65d76975a8bd6ee54c73c631/res/values-as/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "99",
+                        "endOffsets": "304"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "103",
+                        "endOffsets": "154"
+                    }
+                }
+            ]
+        }
+    ]
+}

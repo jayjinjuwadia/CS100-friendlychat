@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "495583180017",
+    "firebase_url": "https://android-tutorial-e433a.firebaseio.com",
+    "project_id": "android-tutorial-e433a",
+    "storage_bucket": "android-tutorial-e433a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495583180017:android:64e58dacc0483faa",
+        "android_client_info": {
+          "package_name": "com.google.firebase.udacity.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495583180017-03vffjmtan1f7p3ep36pdknisbj4183u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.friendlychat",
+            "certificate_hash": "15004cff730c3b76fdd0e7f135b5bf8719898bb9"
+          }
+        },
+        {
+          "client_id": "495583180017-id2799ua2l819684vrrv3fmhnn52fll8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY1AqvI43j5Ht-xwv9L06YiDFaOaWfsz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495583180017-id2799ua2l819684vrrv3fmhnn52fll8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
