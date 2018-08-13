@@ -1,4 +1,4 @@
-#Mon Aug 13 12:05:10 PDT 2018
-base.0=/Users/jayjinjuwadia/cs100/friendlychat/android-tutorial-jayjinjuwadia/and-nd-firebase/app/build/intermediates/transforms/dexMerger/debug/19
+#Mon Aug 13 12:33:30 PDT 2018
+base.0=D\:\\cs100group\\update\\friendlychat\\friendlychatprof\\and-nd-firebase\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex
