@@ -21,10 +21,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageException;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
-
+import  java.lang.Exception;
+import  java.lang.annotation.Annotation;
 public class Main2Activity extends MainActivity {
     private FirebaseStorage mFirebaseStorage2;
    private FirebaseAuth auth;
@@ -36,13 +37,16 @@ public class Main2Activity extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mFirebaseStorage2 = FirebaseStorage.getInstance();
-        mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos");
+        mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos").child(auth.getCurrentUser().getUid());
         setContentView(R.layout.activity_main2);
         textView = (TextView) (findViewById(R.id.textViewprof));
             textView.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
             button = (ImageButton) (findViewById(R.id.Imbutton));
             imview = (ImageView) (findViewById(R.id.imageView));
+            if (!mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().toString().isEmpty()) {
 
+                imview.setImageURI(mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().getResult());
+        }
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -62,9 +66,9 @@ public class Main2Activity extends MainActivity {
                // String userid = user.getUid();
                     Uri selectedImageUri = data.getData();
 
-                    imview.setImageURI(selectedImageUri);
-                    imview.setAdjustViewBounds(true);
-                    final StorageReference photoRef = mProfilePhotosStorageReference.child(selectedImageUri.getLastPathSegment());
+                    //imview.setImageURI(selectedImageUri);
+                   // imview.setAdjustViewBounds(true);
+                    final StorageReference photoRef = mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png");
                     photoRef.putFile(selectedImageUri).addOnFailureListener(this, new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
