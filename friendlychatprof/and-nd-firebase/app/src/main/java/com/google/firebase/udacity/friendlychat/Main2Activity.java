@@ -26,6 +26,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import  java.lang.Exception;
 import  java.lang.annotation.Annotation;
+import java.net.URI;
+
 public class Main2Activity extends MainActivity {
     private FirebaseStorage mFirebaseStorage2;
    private FirebaseAuth auth;
@@ -46,7 +48,11 @@ public class Main2Activity extends MainActivity {
             if (!mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().toString().isEmpty()) {
 
                 imview.setImageURI(mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().getResult());
-        }
+        } else {
+                URI file = new File("@drawable/userdefault.png").toURI();
+                Uri ur = android.net.Uri.parse(file.toString());
+                mProfilePhotosStorageReference.child("userdefault.png").putFile(ur);
+            }
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
