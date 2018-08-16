@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mPhotoPickerButton;
     private EditText mMessageEditText;
     private Button mSendButton;
-
     protected String mUsername;
 
     private FirebaseDatabase mFirebaseDatabase;
@@ -119,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         mPhotoPickerButton = (ImageButton) findViewById(R.id.photoPickerButton);
         mMessageEditText = (EditText) findViewById(R.id.messageEditText);
         mSendButton = (Button) findViewById(R.id.sendButton);
-
         // Initialize message ListView and its adapter
         List<FriendlyMessage> friendlyMessages = new ArrayList<>();
         mMessageAdapter = new MessageAdapter(this, R.layout.item_message, friendlyMessages);
@@ -259,7 +257,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.profile_menu:
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
+                return true;
                         ////////////
+            case R.id.message_menu:
+                Intent intent2 = new Intent(this, MainActivity.class);
+                startActivity(intent2);
+                return true;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
