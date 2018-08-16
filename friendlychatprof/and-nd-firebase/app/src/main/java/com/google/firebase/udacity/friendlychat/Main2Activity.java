@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide;
 
 import java.io.FileInputStream;
 import java.io.File;
@@ -39,20 +40,50 @@ public class Main2Activity extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mFirebaseStorage2 = FirebaseStorage.getInstance();
-        mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos").child(auth.getCurrentUser().getUid());
+        mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos");
         setContentView(R.layout.activity_main2);
         textView = (TextView) (findViewById(R.id.textViewprof));
             textView.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
             button = (ImageButton) (findViewById(R.id.Imbutton));
             imview = (ImageView) (findViewById(R.id.imageView));
-            if (!mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().toString().isEmpty()) {
+            String s = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            s = s.concat(".jpg");
+           StorageReference stref = mProfilePhotosStorageReference.child(s);
+           stref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+               @Override
+               public void onSuccess(Uri uri) {
+                   String imur = uri.toString();
+                   Glide.with(getApplicationContext()).load(imur).into(imview);
+                   imview.setVisibility(View.VISIBLE);
+               }
+           }).addOnFailureListener(new OnFailureListener() {
+               @Override
+               public void onFailure(@NonNull Exception e) {
+                   Toast.makeText(Main2Activity.this, e.getMessage(),Toast.LENGTH_LONG).show();
+                   StorageReference ref = mProfilePhotosStorageReference.child("appleand.png");
+                   ref.getDownloadUrl().addOnFailureListener(new OnFailureListener() {
+                       @Override
+                       public void onFailure(@NonNull Exception e) {
+                           Toast.makeText(Main2Activity.this, e.getMessage(),Toast.LENGTH_LONG).show();
+                       }
+                   }).addOnSuccessListener(new OnSuccessListener<Uri>() {
+                       @Override
+                       public void onSuccess(Uri uri) {
+                           String imageurl = uri.toString();
+                           Glide.with(getApplicationContext()).load(imageurl).into(imview);
+                           imview.setVisibility(View.VISIBLE);
+                       }
+                   });
 
-                imview.setImageURI(mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png").getDownloadUrl().getResult());
-        } else {
-                URI file = new File("@drawable/userdefault.png").toURI();
-                Uri ur = android.net.Uri.parse(file.toString());
-                mProfilePhotosStorageReference.child("userdefault.png").putFile(ur);
-            }
+               }
+
+           });
+
+        /*} /*else {*/
+              // StorageReference ref2 = mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png");
+             //  imview.setImageURI(ref2.getDownloadUrl().getResult());
+
+           // }
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -68,17 +99,17 @@ public class Main2Activity extends MainActivity {
         public void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
 
-               //FirebaseUser user = auth.getCurrentUser();
-               // String userid = user.getUid();
                     Uri selectedImageUri = data.getData();
-
                     //imview.setImageURI(selectedImageUri);
                    // imview.setAdjustViewBounds(true);
-                    final StorageReference photoRef = mProfilePhotosStorageReference.child(auth.getCurrentUser().getUid() + ".png");
+                    String m = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    m = m.concat(".jpg");
+                    final StorageReference photoRef = mProfilePhotosStorageReference.child(m);
+            //final StorageReference photoRef = mProfilePhotosStorageReference.child(selectedImageUri.getLastPathSegment());
                     photoRef.putFile(selectedImageUri).addOnFailureListener(this, new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Main2Activity.this, "Upload Failed", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Main2Activity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     })
                             .addOnSuccessListener(this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
