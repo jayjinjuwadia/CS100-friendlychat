@@ -92,8 +92,8 @@ private class Groupchatadapter extends BaseAdapter {
        }
    }*/
 
-public class Groupchatadapter extends ArrayAdapter<String> {
-    public Groupchatadapter(MainActivity context, int resource, List<String> objects) {
+public class Groupchatadapter extends ArrayAdapter<groupchatname> {
+    public Groupchatadapter(MainActivity context, int resource, List<groupchatname> objects) {
         super(context, resource, objects);
     }
 
@@ -107,12 +107,12 @@ public class Groupchatadapter extends ArrayAdapter<String> {
         photoImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.groupyg = getItem(position);
+                MainActivity.groupyg = getItem(position).getChatname();
                 Intent notagain = new Intent(getContext(), MainActivity.class);
                 getContext().startActivity(notagain);
             }
         });
-        String message = getItem(position);
+        String message = getItem(position).getChatname();
 
         photoImageView.setText(message);
 
