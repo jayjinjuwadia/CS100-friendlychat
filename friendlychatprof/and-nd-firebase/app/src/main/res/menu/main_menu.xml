@@ -13,4 +13,8 @@
         android:id="@+id/message_menu"
         android:title="Message Board"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/groupchat_menu"
+        android:title="Group Chats"
+        app:showAsAction="never" />
 </menu>

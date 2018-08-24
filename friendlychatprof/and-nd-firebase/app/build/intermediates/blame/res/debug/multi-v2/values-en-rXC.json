@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jayjinjuwadia/cs100/friendlychat/android-tutorial-jayjinjuwadia/and-nd-firebase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "/Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "/Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b1aeebd6bb775609cd5d165a3fcebc6b/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/689580a00d340dd3e20d5aa8e4e98449/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -5,7 +5,8 @@
               android:layout_height="wrap_content"
               android:layout_marginLeft="@dimen/activity_horizontal_margin"
               android:layout_marginStart="@dimen/activity_horizontal_margin"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:descendantFocusability="blocksDescendants" >
 
     <ImageView
         android:id="@+id/photoImageView"
@@ -28,5 +29,6 @@
         android:layout_weight="0"
         android:textAppearance="?android:attr/textAppearanceSmall"
         tools:text="Name" />
+
 
 </LinearLayout>

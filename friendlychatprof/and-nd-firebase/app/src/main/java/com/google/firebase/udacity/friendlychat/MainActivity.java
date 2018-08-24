@@ -27,9 +27,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -64,12 +66,14 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    public static String groupyg;
 
     public static final String ANONYMOUS = "anonymous";
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
     private static final String FRIENDLY_MSG_LENGTH_KEY = "friendly_msg_length";
     public static final int RC_SIGN_IN = 1;
     protected static final int RC_PHOTO_PICKER =  2;
+    protected static final int RC_PROFILE_PICKER = 3;
 
     private ListView mMessageListView;
     private MessageAdapter mMessageAdapter;
@@ -77,8 +81,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mPhotoPickerButton;
     private EditText mMessageEditText;
     private Button mSendButton;
-    protected String mUsername;
-
+     protected  String mUsername;
+     protected static String mUIDprofile;
+    protected static String mName;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessagesDatabaseReference;
     private ChildEventListener mChildEventListener;
@@ -102,8 +107,14 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseStorage = FirebaseStorage.getInstance();
         //mFirebaseStorage2 = FirebaseStorage.getInstance();
         mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
-        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
-        mChatPhotosStorageReference = mFirebaseStorage.getReference().child("chat_photos");
+        if (groupyg == null) {
+            mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
+            mChatPhotosStorageReference = mFirebaseStorage.getReference().child("messages_photos");
+       }
+        else {
+          mMessagesDatabaseReference = mFirebaseDatabase.getReference().child(groupyg);
+          mChatPhotosStorageReference = mFirebaseStorage.getReference().child(groupyg + "_photos");
+       }
         //mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos");
         //androidimagebutton = (ImageButton) findViewById(R.id.imageButtonProfile);
         //androidimagebutton.setOnClickListener(new View.OnClickListener() {
@@ -113,15 +124,26 @@ public class MainActivity extends AppCompatActivity {
         //    }
       //  });
         // Initialize references to views
+
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mMessageListView = (ListView) findViewById(R.id.messageListView);
         mPhotoPickerButton = (ImageButton) findViewById(R.id.photoPickerButton);
         mMessageEditText = (EditText) findViewById(R.id.messageEditText);
         mSendButton = (Button) findViewById(R.id.sendButton);
         // Initialize message ListView and its adapter
-        List<FriendlyMessage> friendlyMessages = new ArrayList<>();
+        final List<FriendlyMessage> friendlyMessages = new ArrayList<>();
         mMessageAdapter = new MessageAdapter(this, R.layout.item_message, friendlyMessages);
         mMessageListView.setAdapter(mMessageAdapter);
+        mMessageListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                 mName = friendlyMessages.get(i).getName();
+                mUIDprofile = friendlyMessages.get(i).getUID();
+                //Toast.makeText(MainActivity.this, mUIDprofile, Toast.LENGTH_LONG).show();
+                Intent inty = new Intent(MainActivity.this, Main2Activity.class );
+                startActivity(inty);
+            }
+        });
 
         // Initialize progress bar
         mProgressBar.setVisibility(ProgressBar.INVISIBLE);
@@ -164,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // TODO: Send messages on click
-                FriendlyMessage friendlyMessage = new FriendlyMessage(mMessageEditText.getText().toString(), mUsername, null);
+                FriendlyMessage friendlyMessage = new FriendlyMessage(mMessageEditText.getText().toString(), mUsername, null, FirebaseAuth.getInstance().getCurrentUser().getUid());
                 mMessagesDatabaseReference.push().setValue(friendlyMessage);
                 // Clear input box
                 mMessageEditText.setText("");
@@ -230,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Uri uri) {
                                         Uri dlUri = uri;
-                                        FriendlyMessage friendlyMessage = new FriendlyMessage(null, mUsername, dlUri.toString());
+                                        FriendlyMessage friendlyMessage = new FriendlyMessage(null, mUsername, dlUri.toString(), FirebaseAuth.getInstance().getCurrentUser().getUid());
                                         mMessagesDatabaseReference.push().setValue(friendlyMessage);
                                     }
                                 });
@@ -255,13 +277,21 @@ public class MainActivity extends AppCompatActivity {
                 return true;
                 /////////////
             case R.id.profile_menu:
+                mName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+                mUIDprofile = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
                 return true;
                         ////////////
             case R.id.message_menu:
+                groupyg = "messages";
                 Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
+                return true;
+
+            case R.id.groupchat_menu:
+                Intent intent5 = new Intent(this, groupchat.class);
+                startActivity(intent5);
                 return true;
 
 

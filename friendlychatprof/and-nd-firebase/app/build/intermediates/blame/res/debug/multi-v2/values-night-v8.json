@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jayjinjuwadia/cs100/friendlychat/android-tutorial-jayjinjuwadia/and-nd-firebase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b1aeebd6bb775609cd5d165a3fcebc6b/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/689580a00d340dd3e20d5aa8e4e98449/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

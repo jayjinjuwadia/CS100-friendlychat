@@ -40,6 +40,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.google.firebase.udacity.friendlychat.Main2Activity" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.groupchat" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.Groupchatadapter" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.Main3Activity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -1,5 +1,4 @@
 package com.google.firebase.udacity.friendlychat;
-
 import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
@@ -10,13 +9,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
-
 import java.io.FileInputStream;
 import java.io.File;
 import java.io.InputStream;
 import android.view.View;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,7 +22,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageException;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import  java.lang.Exception;
+import java.lang.Exception;
 import  java.lang.annotation.Annotation;
 import java.net.URI;
 
@@ -43,11 +40,19 @@ public class Main2Activity extends MainActivity {
         mProfilePhotosStorageReference = mFirebaseStorage2.getReference().child("profile_photos");
         setContentView(R.layout.activity_main2);
         textView = (TextView) (findViewById(R.id.textViewprof));
-            textView.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
+            textView.setText(mName);
             button = (ImageButton) (findViewById(R.id.Imbutton));
             imview = (ImageView) (findViewById(R.id.imageView));
-            String s = FirebaseAuth.getInstance().getCurrentUser().getUid();
-            s = s.concat(".jpg");
+            if (FirebaseAuth.getInstance().getCurrentUser().getUid() != mUIDprofile) {
+                button.setVisibility(View.INVISIBLE);
+            }
+            else {
+                button.setVisibility(View.VISIBLE);
+            }
+        //Toast.makeText(Main2Activity.this, mUIDprofile, Toast.LENGTH_LONG).show();
+            String s = mUIDprofile;
+                s = s.concat(".jpg");
+
            StorageReference stref = mProfilePhotosStorageReference.child(s);
            stref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                @Override
@@ -90,7 +95,7 @@ public class Main2Activity extends MainActivity {
                     Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                     intent.setType("image/jpeg");
                     intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
-                    startActivityForResult(Intent.createChooser(intent, "Complete action using"), RC_PHOTO_PICKER);
+                    startActivityForResult(Intent.createChooser(intent, "Complete action using"), RC_PROFILE_PICKER);
                     // TODO: Fire an intent to show an image picker
                 }
             });
@@ -98,7 +103,7 @@ public class Main2Activity extends MainActivity {
         }
         public void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
-
+            //Toast.makeText(this, "******", Toast.LENGTH_LONG).show();
                     Uri selectedImageUri = data.getData();
                     //imview.setImageURI(selectedImageUri);
                    // imview.setAdjustViewBounds(true);
@@ -117,9 +122,10 @@ public class Main2Activity extends MainActivity {
                                     photoRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {
-                                            Uri dlUri = uri;
-                                            imview.setImageURI(dlUri);
-                                            imview.setVisibility(View.VISIBLE);
+                                            imview.setImageURI(uri);
+                                            //imview.setVisibility(View.VISIBLE);
+                                            Intent in = new Intent(Main2Activity.this, Main2Activity.class);
+                                            startActivity(in);
                                         }
                                     });
                                 }
