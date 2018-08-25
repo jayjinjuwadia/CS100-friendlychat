@@ -12,8 +12,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.List;
+
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -23,8 +26,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
+
+import java.io.File;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -35,6 +42,7 @@ public class groupchat extends MainActivity {
     private DatabaseReference mData2;
     private DatabaseReference mStor;
     private DatabaseReference mStor2;
+    private FirebaseStorage mGod;
     private ListView lview;
     private Groupchatadapter mGroupAdapter;
     private int flag = 0;
@@ -49,8 +57,17 @@ public class groupchat extends MainActivity {
         mData2 = mData.getReference();
         final List<groupchatname> gcarray = new ArrayList<>();
         lview = (ListView) findViewById(R.id.messageListView2);
-
-
+     /*  StorageTask f = mGod.getReference().getFile(mGod.getReference().child("god.txt").getDownloadUrl().getResult()).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(groupchat.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        }).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+           @Override
+           public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+               Toast.makeText(groupchat.this, "Toasty",Toast.LENGTH_LONG).show();
+           }
+       });*/
         mGroupAdapter = new Groupchatadapter(groupchat.this, R.layout.activity_groupchat ,gcarray);
         lview.setAdapter(mGroupAdapter);
         //DataSnapshot dat = mData2.child("Group Chat 0");
