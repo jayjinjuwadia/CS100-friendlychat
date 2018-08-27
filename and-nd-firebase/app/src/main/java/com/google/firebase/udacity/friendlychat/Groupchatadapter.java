@@ -1,23 +1,12 @@
 package com.google.firebase.udacity.friendlychat;
 import android.content.Intent;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import android.app.Activity;
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.view.View;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import java.lang.Object;
-import android.view.LayoutInflater;
 
-
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 //public class Groupchatadapter extends ArrayAdapter<String> {
@@ -29,7 +18,7 @@ import java.util.List;
 
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_groupchat, parent, false);
+            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_chatroom, parent, false);
         }
         Button superbutt = (Button) convertView.findViewById(R.id.groupbutton);
         groupchatname gpn = getItem(position);
@@ -47,7 +36,7 @@ private class Groupchatadapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup container) {
         if (convertView == null) {
-            convertView = getLayoutInflater().inflate(R.layout.activity_groupchat, container, false);
+            convertView = getLayoutInflater().inflate(R.layout.activity_chatroom, container, false);
         }
 
         ((Button) convertView.findViewById(R.id.groupbutton)).setText(getItem(position).toString());
@@ -70,7 +59,7 @@ private class Groupchatadapter extends BaseAdapter {
            ViewHolder mainViewholder = null;
            if (convertView == null) {
                LayoutInflater inflater = LayoutInflater.from(getContext());
-               convertView = inflater.inflate(R.layout.activity_groupchat, parent, false);
+               convertView = inflater.inflate(R.layout.activity_chatroom, parent, false);
                ViewHolder viewHolder = new ViewHolder();
                viewHolder.button = (Button) convertView.findViewById(R.id.groupbutton);
                convertView.setTag(viewHolder);
@@ -100,7 +89,7 @@ public class Groupchatadapter extends ArrayAdapter<groupchatname> {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_groupchat_jay, parent, false);
+            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_groupchat, parent, false);
         }
 
         TextView photoImageView = (TextView) convertView.findViewById(R.id.groupbutton);

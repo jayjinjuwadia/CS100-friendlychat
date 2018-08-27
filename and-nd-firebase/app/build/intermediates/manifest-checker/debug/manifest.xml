@@ -41,7 +41,7 @@
         </activity>
         <activity android:name="com.google.firebase.udacity.friendlychat.Main2Activity" />
         <activity
-            android:name="com.google.firebase.udacity.friendlychat.groupchat"
+            android:name="com.google.firebase.udacity.friendlychat.chatroom"
             android:label="@string/group_name" />
         <activity
             android:name="com.google.firebase.udacity.friendlychat.CS100GROUP"
@@ -52,8 +52,9 @@
         <activity
             android:name="com.google.firebase.udacity.friendlychat.CS180GROUP"
             android:label="@string/cs180" />
-        <activity android:name="com.google.firebase.udacity.friendlychat.groupchat_jay" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.groupchat" />
         <activity android:name="com.google.firebase.udacity.friendlychat.Groupchatadapter" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.addm" />
 
         <meta-data
             android:name="com.google.android.gms.version"

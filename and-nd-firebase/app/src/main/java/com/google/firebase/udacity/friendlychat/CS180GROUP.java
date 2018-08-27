@@ -207,8 +207,8 @@ public class CS180GROUP extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.groupchat_menu:
-                Intent intent3 = new Intent(CS180GROUP.this, groupchat.class);
+            case R.id.chatroom_menu:
+                Intent intent3 = new Intent(CS180GROUP.this, chatroom.class);
                 startActivity(intent3);
                 return true;
             //////////

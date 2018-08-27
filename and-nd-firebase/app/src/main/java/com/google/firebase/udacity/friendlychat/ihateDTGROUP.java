@@ -208,8 +208,8 @@ public class ihateDTGROUP extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.groupchat_menu:
-                Intent intent5 = new Intent(ihateDTGROUP.this, groupchat.class);
+            case R.id.chatroom_menu:
+                Intent intent5 = new Intent(ihateDTGROUP.this, chatroom.class);
                 startActivity(intent5);
                 return true;
             //////////

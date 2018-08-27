@@ -4,6 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/groupchat_menu"
+        android:id="@+id/chatroom_menu"
         android:title="GroupChat" />
 </menu>

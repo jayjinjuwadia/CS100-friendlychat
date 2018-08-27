@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-4.1.0.aar\69961e258c9030d0cf7d756cc96411eb\AndroidManifest.xml:2:1-114:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d600130c2043cf076ab990875ba80d63\AndroidManifest.xml:17:1-22:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\library-1.4.2.aar\5e05458bb3683d144f8bd24443298f1d\AndroidManifest.xml:6:1-16:12
@@ -58,20 +58,20 @@ MERGED from [com.android.support:support-compat:27.1.1] C:\Users\raymo\.gradle\c
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\2d4f291a68ff27abee8e3be5d6f1c25c\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9b85a63f64883d31c2a2cc409388e26b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\ece6ee8b09f0d640d45a9b7d4f982b1e\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:3:5-55
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
-		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
-		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:2:11-69
@@ -110,7 +110,7 @@ ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\
 	android:name
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:9:22-63
 application
-ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:11:5-39:19
+ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:11:5-40:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-4.1.0.aar\69961e258c9030d0cf7d756cc96411eb\AndroidManifest.xml:15:5-112:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-4.1.0.aar\69961e258c9030d0cf7d756cc96411eb\AndroidManifest.xml:15:5-112:19
 MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\raymo\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\7dd88685b4bc406d817a19235fc74964\AndroidManifest.xml:7:5-20
@@ -189,12 +189,12 @@ activity#com.google.firebase.udacity.friendlychat.Main2Activity
 ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:24:9-51
 	android:name
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:24:19-48
-activity#com.google.firebase.udacity.friendlychat.groupchat
+activity#com.google.firebase.udacity.friendlychat.chatroom
 ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:25:9-27:50
 	android:label
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:27:13-47
 	android:name
-		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:26:13-38
+		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:26:13-37
 activity#com.google.firebase.udacity.friendlychat.CS100GROUP
 ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:28:9-30:45
 	android:label
@@ -213,14 +213,18 @@ ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:36:13-42
 	android:name
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:35:13-39
-activity#com.google.firebase.udacity.friendlychat.groupchat_jay
-ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:37:9-51
+activity#com.google.firebase.udacity.friendlychat.groupchat
+ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:37:9-47
 	android:name
-		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:37:19-48
+		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:37:19-44
 activity#com.google.firebase.udacity.friendlychat.Groupchatadapter
 ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:38:9-54
 	android:name
 		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:38:19-51
+activity#com.google.firebase.udacity.friendlychat.addm
+ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:39:9-51
+	android:name
+		ADDED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml:39:19-39
 uses-sdk
 INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\friendlychat(groupchat_update2.0 and profile)\and-nd-firebase\app\src\main\AndroidManifest.xml

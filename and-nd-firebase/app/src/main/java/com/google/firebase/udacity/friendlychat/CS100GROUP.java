@@ -201,8 +201,8 @@ public class CS100GROUP extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.groupchat_menu:
-                Intent intent5 = new Intent(CS100GROUP.this, groupchat.class);
+            case R.id.chatroom_menu:
+                Intent intent5 = new Intent(CS100GROUP.this, chatroom.class);
                 startActivity(intent5);
                 return true;
                 //////////
@@ -282,7 +282,7 @@ public class CS100GROUP extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_groupchat, parent, false);
+                convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.activity_chatroom, parent, false);
             }
 
             TextView photoImageView = (TextView) convertView.findViewById(R.id.groupbutton);

@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     //ImageButton androidimagebutton;
     //added
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -264,42 +264,83 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
+        if (groupyg == null || groupyg.equals("messages")) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.main_menu, menu);
+            return true;
+        }
+
+        else {
+            MenuInflater inflator = getMenuInflater();
+            inflator.inflate(R.menu.groupy_menu,menu);
+            return true;
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.sign_out_menu:
-                AuthUI.getInstance().signOut(this);
-                return true;
-            /////////////
-            case R.id.profile_menu:
-                mName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
-                mUIDprofile = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                startActivity(intent);
-                return true;
-            ////////////
-            case R.id.message_menu:
-                groupyg = "messages";
-                Intent intent2 = new Intent(this, MainActivity.class);
-                startActivity(intent2);
-                return true;
+        if (groupyg == null|| groupyg.equals("messages")) {
+            switch (item.getItemId()) {
+                case R.id.sign_out_menu:
+                    AuthUI.getInstance().signOut(this);
+                    return true;
+                /////////////
+                case R.id.profile_menu:
+                    mName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+                    mUIDprofile = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                    startActivity(intent);
+                    return true;
+                ////////////
+                case R.id.message_menu:
+                    groupyg = "messages";
+                    Intent intent2 = new Intent(this, MainActivity.class);
+                    startActivity(intent2);
+                    return true;
 
-            case R.id.groupchat_menu:
-                Intent intent5 = new Intent(this, groupchat_jay.class);
-                startActivity(intent5);
-                return true;
+                case R.id.groupchat_menu:
+                    Intent intent5 = new Intent(this, groupchat.class);
+                    startActivity(intent5);
+                    return true;
 
-            case R.id.chatroom_menu:
-                Intent intent6 = new Intent(this, groupchat.class);
-                startActivity(intent6);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+        }
+        else {
+            switch (item.getItemId()) {
+                case R.id.sign_out_menu2:
+                    AuthUI.getInstance().signOut(this);
+                    return true;
+                /////////////
+                case R.id.profile_menu2:
+                    mName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+                    mUIDprofile = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                    startActivity(intent);
+                    return true;
+                ////////////
+                case R.id.message_menu2:
+                    groupyg = "messages";
+                    Intent intent2 = new Intent(this, MainActivity.class);
+                    startActivity(intent2);
+                    return true;
+
+                case R.id.groupchat_menu2:
+                    Intent intent5 = new Intent(this, groupchat.class);
+                    startActivity(intent5);
+                    return true;
+
+                case R.id.add_member:
+                    Intent intenty = new Intent(this, addm.class);
+                    startActivity(intenty);
+                    startActivity(intenty);
+                    return true;
+
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
         }
 
     }

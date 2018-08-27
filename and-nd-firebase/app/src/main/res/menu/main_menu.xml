@@ -19,7 +19,7 @@
         android:title="Messageboard"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/chatroom_menu"
+        android:id="@+id/chatrooms_menu"
         android:title="Chatroom"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 </menu>
