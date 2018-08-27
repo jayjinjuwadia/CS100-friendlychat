@@ -258,6 +258,7 @@ public class groupchat extends MainActivity {
                         public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                             try {
                                 fgwr.write(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                fgwr.write('\n');
                                 fgwr.close();
                                 Uri ury = Uri.parse(filer.toURI().toString());
                                 mData3.putFile(ury).addOnFailureListener(new OnFailureListener() {
@@ -280,8 +281,9 @@ public class groupchat extends MainActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             try {
-                                fgwr.write(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                fgwr.write('\n');
+                                bfgwr.write(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                bfgwr.newLine();
+                                bfgwr.close();
                                 fgwr.close();
                                 Uri ury2 = Uri.parse(filer.toURI().toString());
                                 mData3.putFile(ury2).addOnFailureListener(new OnFailureListener() {

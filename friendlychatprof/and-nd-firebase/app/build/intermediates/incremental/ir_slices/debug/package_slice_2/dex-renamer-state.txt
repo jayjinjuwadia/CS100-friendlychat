@@ -1,4 +1,4 @@
-#Mon Aug 27 00:03:00 PDT 2018
+#Mon Aug 27 01:25:21 PDT 2018
 base.0=/Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/build/intermediates/transforms/dexMerger/debug/20
 path.0=classes.dex
 renamed.0=classes.dex

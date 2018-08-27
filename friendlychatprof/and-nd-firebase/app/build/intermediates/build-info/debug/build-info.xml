@@ -5,28 +5,23 @@
     build-mode="COLD"
     density="560dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.4"
-    timestamp="1535353377714"
+    timestamp="1535358389930"
     token="-8669566146609458077"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="373" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="40" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
-
-    <artifact
-        location="/Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
+        duration="0" />
 
     <build
         build-mode="FULL"
@@ -74,12 +69,16 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1535353377714"
+        ir-eligibility="FIELD_ADDED"
+        timestamp="1535358318771"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
     </build>
+    <build
+        build-mode="COLD"
+        timestamp="1535358389930"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

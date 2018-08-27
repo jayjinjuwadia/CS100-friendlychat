@@ -21,12 +21,15 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.File;
+import java.util.ArrayList;
 
 public class addm extends MainActivity {
     StorageReference storef = FirebaseStorage.getInstance().getReference().child(groupyg+ "uid.txt");
+    ArrayList<String> uidlist = new ArrayList<> ();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,30 +66,48 @@ public class addm extends MainActivity {
             public void onClick(View view) {
                 // TODO: Send messages on click
                 try {
-                   final  File fl = File.createTempFile(edi.getText().toString(), "prof.txt");
-                    final FileWriter flot = new FileWriter(fl, true);
-                    final BufferedWriter flotter = new BufferedWriter(flot);
+                   final  File fl = File.createTempFile(edi.getText().toString() + "prof", "txt");
+                  //  final FileWriter flot = new FileWriter(fl);
+                 //  final BufferedWriter flotter = new BufferedWriter(flot);
+                    //final PrintWriter printy = new PrintWriter(flotter);
                     storef.getFile(fl).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                             try {
-                                flotter.append(edi.getText().toString());
-                                flotter.append('\n');
+                                String ur = edi.getText().toString();
                                 FileReader fu = new FileReader(fl);
                                 BufferedReader futter = new BufferedReader(fu);
                                 String me = futter.readLine();
                                 while (me != null) {
+                                    uidlist.add(me);
                                     Toast.makeText(addm.this, me,Toast.LENGTH_LONG).show();
                                     me = futter.readLine();
                                 }
+                                futter.close();
+                                fu.close();
+                                fl.deleteOnExit();
+                                final File flut = File.createTempFile(ur + groupyg, "txt");
+                                FileWriter flutty = new FileWriter(flut);
+                                BufferedWriter flutter = new BufferedWriter(flutty);
+                                while (!uidlist.isEmpty()) {
+                                    flutter.write(uidlist.get(0));
+                                    flutter.newLine();
+                                    uidlist.remove(0);
+                                }
+                                flutter.write(ur);
+                                flutter.close();
+                                flutty.close();
 
-                                Uri ury = android.net.Uri.parse(fl.toURI().toString());
+
+
+                                Uri ury = android.net.Uri.parse(flut.toURI().toString());
                                 storef.putFile(ury).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                     @Override
                                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                         //fl.deleteOnExit();
                                         Toast.makeText(addm.this, "Successfully added member", Toast.LENGTH_LONG).show();
                                         edi.setText("");
+                                        flut.deleteOnExit();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
