@@ -6,9 +6,9 @@
         android:title="@string/sign_out"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/profile_menu"
-        android:title="Profile"
-        app:showAsAction="never" />
+    android:id="@+id/profile_menu"
+    android:title="Profile"
+    app:showAsAction="never" />
     <item
         android:id="@+id/message_menu"
         android:title="Message Board"

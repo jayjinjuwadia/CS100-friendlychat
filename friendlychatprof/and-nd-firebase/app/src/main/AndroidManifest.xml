@@ -24,7 +24,8 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".groupchat" />
         <activity android:name=".Groupchatadapter" />
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".addm"></activity>
     </application>
 
 </manifest>

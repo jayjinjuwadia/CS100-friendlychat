@@ -43,6 +43,7 @@
         <activity android:name="com.google.firebase.udacity.friendlychat.groupchat" />
         <activity android:name="com.google.firebase.udacity.friendlychat.Groupchatadapter" />
         <activity android:name="com.google.firebase.udacity.friendlychat.Main3Activity" />
+        <activity android:name="com.google.firebase.udacity.friendlychat.addm" />
 
         <meta-data
             android:name="com.google.android.gms.version"

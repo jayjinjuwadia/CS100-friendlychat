@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-4.1.0.aar/990a31bb23c97b0e228eea88e0cc01b2/AndroidManifest.xml:2:1-114:12
 MERGED from [com.android.support:design:27.1.1] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/36b8dfe66938aa48989b6de61f9acfd4/AndroidManifest.xml:17:1-22:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/library-1.4.2.aar/316f2cff7e71c1750166cb9d88b73739/AndroidManifest.xml:6:1-16:12
@@ -58,20 +58,20 @@ MERGED from [android.arch.core:runtime:1.1.1] /Users/jayjinjuwadia/.gradle/cache
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/01189a537dbc04b2f66bbb1a39d70e98/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/c18b7cc543850a06e95358f35baa0249/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/217fb9e354c6602564f3cf35b83ba90b/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:3:5-55
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
-		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
-		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:2:11-69
@@ -110,7 +110,7 @@ ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-fireb
 	android:name
 		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:9:22-63
 application
-ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:11:5-28:19
+ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:11:5-29:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-4.1.0.aar/990a31bb23c97b0e228eea88e0cc01b2/AndroidManifest.xml:15:5-112:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.1.0] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-4.1.0.aar/990a31bb23c97b0e228eea88e0cc01b2/AndroidManifest.xml:15:5-112:19
 MERGED from [com.google.firebase:firebase-core:16.0.1] /Users/jayjinjuwadia/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/a993f8587aa252ef19e422f28130a841/AndroidManifest.xml:7:5-20
@@ -198,9 +198,13 @@ ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-fireb
 	android:name
 		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:26:19-51
 activity#com.google.firebase.udacity.friendlychat.Main3Activity
-ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:27:9-60
+ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:27:9-51
 	android:name
 		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:27:19-48
+activity#com.google.firebase.udacity.friendlychat.addm
+ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:28:9-51
+	android:name
+		ADDED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml:28:19-39
 uses-sdk
 INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/jayjinjuwadia/cs100/friendlychat/friendlychatprof/and-nd-firebase/app/src/main/AndroidManifest.xml
